@@ -31,7 +31,7 @@ public class MineSweeper {
         for (int i = 0; i < n; i++){
             for (int j = 0; j < n; j++){
                 if (ans[i][j] > 8){
-                    System.out.printf("F");
+                    System.out.print("F");
                 }
                 else{
                     System.out.printf("%d", ans[i][j]);
