@@ -17,6 +17,17 @@ public class test01 {
 
         roll.setExpressions(atomicLetter);
 
+        System.out.println("!");
+        roll.dfs( () -> {
+            logic_expression e_1 = new logic_expression(logic_calc.AND,
+                    new logic_expression(logic_calc.IMPLY, A, B),
+                    new logic_expression(logic_calc.IMPLY, B, A));
+            logic_expression e_2 = new logic_expression(logic_calc.EQUAL, A, B);
+            System.out.printf("%s ||| %s\n", e_1, e_2);
+        });
+
+        System.exit(0);
+
         System.out.println("(1,1)");
         roll.dfs( () -> {
             logic_expression e1 = new logic_expression(logic_calc.EQUAL, A, B);
